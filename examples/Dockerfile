@@ -1,4 +1,4 @@
-FROM nginxinc/nginx-unprivileged:mainline-alpine-perl
+FROM registry.access.redhat.com/sumologic/nginx-unprivileged
 
 ENV NGINX_VERSION=1.20
 
