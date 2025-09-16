@@ -1,5 +1,5 @@
 #FROM registry.access.redhat.com/sumologic/nginx-unprivileged
-FROM registry.access.redhat.com/ubi9/nginx-120
+FROM  image-registry.openshift-image-registry.svc:5000/solution-building-k8s-parthiban/nginx-120
 
 ENV NGINX_VERSION=1.20
 
