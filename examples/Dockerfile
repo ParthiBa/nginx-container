@@ -16,6 +16,6 @@ ADD $NGINX_VERSION/test-app/*.html ./
 RUN chgrp -R root /var/cache/nginx /var/run /var/log/nginx && \
     chmod -R 770 /var/cache/nginx /var/run /var/log/nginx
 
-
+EXPOSE 8080
 # Run script uses standard ways to run the application
 CMD nginx -g "daemon off;"
