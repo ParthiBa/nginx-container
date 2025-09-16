@@ -1,4 +1,5 @@
-FROM registry.access.redhat.com/sumologic/nginx-unprivileged
+#FROM registry.access.redhat.com/sumologic/nginx-unprivileged
+FROM registry.access.redhat.com/ubi9/nginx-120
 
 ENV NGINX_VERSION=1.20
 
