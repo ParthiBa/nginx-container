@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/nginx-120
+FROM nginxinc/nginx-unprivileged:mainline-alpine-perl
 
 ENV NGINX_VERSION=1.20
 
