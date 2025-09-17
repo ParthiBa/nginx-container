@@ -1,5 +1,5 @@
 FROM registry.access.redhat.com/ubi9/nginx-120
-
+# Somehow the OCP not able retireve the above image and it is using debian one
 ENV NGINX_VERSION=1.20
 
 # Add application sources
@@ -8,7 +8,7 @@ ENV NGINX_VERSION=1.20
 #ADD nginx-container/examples/$NGINX_VERSION/test-app/nginx-cfg/*.conf "${NGINX_CONFIGURATION_PATH}"
 #ADD nginx-container/examples/$NGINX_VERSION/test-app/*.html ./
 
-RUN ["mkdir","/opt/app-root/src/"]
+RUN ["mkdir","-p","/opt/app-root/src/"]
 
 ADD $NGINX_VERSION/test-app/nginx.conf /etc/nginx/nginx.conf
 ADD $NGINX_VERSION/test-app/nginx-default-cfg/*.conf /etc/nginx.default.d/
