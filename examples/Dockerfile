@@ -13,6 +13,9 @@ ADD $NGINX_VERSION/test-app/nginx-default-cfg/*.conf /etc/nginx.default.d/
 ADD $NGINX_VERSION/test-app/nginx-cfg/*.conf /etc/nginx/conf.d/
 ADD $NGINX_VERSION/test-app/*.html ./
 
+RUN ["apt-get", "update"]
+RUN ["apt-get", "install", "-y", "vim-tiny"]
+
 RUN chgrp -R root /var/cache/nginx /var/run /var/log/nginx && \
     chmod -R 770 /var/cache/nginx /var/run /var/log/nginx
 
